@@ -1,0 +1,1319 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"date_tim",
+				"date_timezone_set"
+			],
+			[
+				"Get",
+				"GetArticleData"
+			],
+			[
+				"str",
+				"strtolower"
+			],
+			[
+				"title",
+				"titleArray"
+			],
+			[
+				"Article",
+				"ArticlePreview"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"post",
+				"postArticle"
+			],
+			[
+				"arraf",
+				"array_filter"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"body",
+				"bodyText"
+			],
+			[
+				"prit",
+				"print_r"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"pos",
+				"pos-r	position: relative;"
+			],
+			[
+				"array_s",
+				"array_shift"
+			],
+			[
+				"arrap",
+				"array_pop"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"pregmatc",
+				"preg_match_all"
+			],
+			[
+				"ob_f",
+				"ob_end_flush"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"d",
+				"d-f	display: flex;"
+			],
+			[
+				"back",
+				"backgroundGrey"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"error",
+				"errorString"
+			],
+			[
+				"logi",
+				"LoginStatus"
+			],
+			[
+				"user",
+				"UserStatus"
+			],
+			[
+				"Logi",
+				"LoginStatus"
+			],
+			[
+				"User",
+				"UserStatus"
+			],
+			[
+				"obget",
+				"ob_get_contents"
+			],
+			[
+				"requ",
+				"requestUrl"
+			],
+			[
+				"syst",
+				"systemObj"
+			],
+			[
+				"Syte",
+				"systemObj"
+			],
+			[
+				"call",
+				"call_user_func"
+			],
+			[
+				"req",
+				"requestUrl"
+			],
+			[
+				"data",
+				"Database"
+			],
+			[
+				"database",
+				"databaseDetails"
+			],
+			[
+				"syste",
+				"systemConfig"
+			],
+			[
+				"Getda",
+				"GetDatabaseSystem"
+			],
+			[
+				"lo",
+				"LoginStatus"
+			],
+			[
+				"check",
+				"CheckPassword"
+			],
+			[
+				"com",
+				"confirmationCode"
+			],
+			[
+				"regis",
+				"RegisterStatus"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"re",
+				"requestUrl"
+			],
+			[
+				"Ba",
+				"BASE_DIR"
+			],
+			[
+				"audio",
+				"audioElem"
+			],
+			[
+				"play",
+				"playListItems"
+			],
+			[
+				"ge",
+				"getElementsByClassName"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"page",
+				"page-break-before"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"ov",
+				"ov-h	overflow: hidden;"
+			],
+			[
+				"td",
+				"td-u	text-decoration: underline;"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"ta",
+				"ta-l	text-align: left;"
+			],
+			[
+				"tal",
+				"tal-l	text-align-last: left;"
+			],
+			[
+				"confirmation",
+				"confirmationCode"
+			],
+			[
+				"confirmat",
+				"confirmationCode"
+			],
+			[
+				"password",
+				"passwordHash"
+			],
+			[
+				"mt",
+				"mt_srand"
+			],
+			[
+				"invite",
+				"inviteCode"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"animate",
+				"animateBackground"
+			],
+			[
+				"inver",
+				"inverterLayer"
+			],
+			[
+				"ce",
+				"centerX"
+			],
+			[
+				"cu",
+				"currY"
+			],
+			[
+				"curr",
+				"currX"
+			],
+			[
+				"mag",
+				"magnitude"
+			],
+			[
+				"fre",
+				"freqByteData"
+			],
+			[
+				"box",
+				"box-padding"
+			],
+			[
+				"mkti",
+				"mktime"
+			],
+			[
+				"week",
+				"weekInMonth"
+			],
+			[
+				"month",
+				"monthArray"
+			],
+			[
+				"cale",
+				"calendarContainer"
+			],
+			[
+				"cal",
+				"calData"
+			],
+			[
+				"app",
+				"appFunctions"
+			],
+			[
+				"router",
+				"routerData"
+			],
+			[
+				"br",
+				"bdr	border-right"
+			],
+			[
+				"total",
+				"totalHue"
+			],
+			[
+				"tota",
+				"totalHue"
+			],
+			[
+				"quota",
+				"quotaMaxAsGB"
+			],
+			[
+				"qut",
+				"quotaMaxAsGB"
+			],
+			[
+				"cluster",
+				"clusterFuck"
+			],
+			[
+				"th",
+				"this_week"
+			],
+			[
+				"mt_",
+				"mt_rand"
+			],
+			[
+				"rand",
+				"mt_rand"
+			],
+			[
+				"isnu",
+				"is_numeric"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"start",
+				"startPoint"
+			],
+			[
+				"preg_match",
+				"preg_match"
+			],
+			[
+				"connect",
+				"connectionStats"
+			],
+			[
+				"pa",
+				"pageURL"
+			],
+			[
+				"new",
+				"newangle"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"x",
+				"xdirection"
+			],
+			[
+				"particl",
+				"particle"
+			],
+			[
+				"partc",
+				"particle"
+			],
+			[
+				"parti",
+				"particleList"
+			],
+			[
+				"par",
+				"particleList"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"thread-reply",
+				"thread-reply-container"
+			],
+			[
+				"number",
+				"number_format"
+			],
+			[
+				"max",
+				"maxFileSize"
+			],
+			[
+				"File",
+				"FileManager"
+			],
+			[
+				"form",
+				"form_data"
+			],
+			[
+				"fucn",
+				"function"
+			],
+			[
+				"Thread",
+				"ThreadList"
+			],
+			[
+				"login",
+				"login-container"
+			],
+			[
+				"open",
+				"open_connection"
+			],
+			[
+				"movie",
+				"movie_survey"
+			],
+			[
+				"render_",
+				"render_page"
+			],
+			[
+				"regex",
+				"regex_results"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"rege",
+				"regex"
+			],
+			[
+				"file",
+				"filename_label"
+			],
+			[
+				"input",
+				"input_filename"
+			],
+			[
+				"searh",
+				"search_button"
+			],
+			[
+				"column",
+				"columnspan"
+			],
+			[
+				"window",
+				"window_padding"
+			],
+			[
+				"chat",
+				"chatRoomID"
+			],
+			[
+				"chatter",
+				"chatterID"
+			],
+			[
+				"ch",
+				"chatterID"
+			],
+			[
+				"curren",
+				"current_question"
+			],
+			[
+				"ini",
+				"inline-block"
+			],
+			[
+				"base",
+				"base64_decode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"mon",
+				"MonaLisa_X"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 953,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "system/inc/Database.php",
+			"settings":
+			{
+				"buffer_size": 1615,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: up",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/H/_QUT/INB371/assessment 2/VideoStorePlusPlus/VideoStorePlusPlus.cbp",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsView.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsDeleteModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/Database.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsList.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_forms.scss",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_article.scss",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsDelete.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsEditModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsListModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsAdd.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsEdit.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsAddModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/main.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsArticleCreated.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_dashboard.scss",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsCreate.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsDefaultModel.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/dashboardPageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news/newsMenu.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/style.scss",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/article.scss",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/MarkdownParser.php",
+		"/C/Users/scoot/Dropbox/rams stuff/system/inc/UserRegistration.php",
+		"/C/Users/scoot/Dropbox/rams stuff/login.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/system/main.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/system/inc/UserRegistration.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/login.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_news.scss",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/newsView.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/newList.php",
+		"/H/xampp_5.5.0/htdocs/toybox/audio player/js/mute.js",
+		"/C/Users/scoot/Documents/test.html",
+		"/C/Users/scoot/Documents/whatever.html",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/dashboard-menu.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_navigation.scss",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_site-wide.scss",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/dashboard-page.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/dashboard-missing.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/views/news-view.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/router.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/subpages/news-view.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/models/newsClass.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/page_modules/newsClass.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/dashboard/subpages/dashboard-index.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/fragments/navigation.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/_colours.scss",
+		"/H/xampp_5.5.0/htdocs/mage/index.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_dashboard",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/loginPageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/.htaccess",
+		"/H/xampp_5.5.0/htdocs/mage/pages/index/indexPageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/index/front-page.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/login-page.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/fragments/_baseContent.php",
+		"/H/xampp_5.5.0/htdocs/mage/styles/partials/_typography.scss",
+		"/H/xampp_5.5.0/htdocs/mage/styles/_reset.sass",
+		"/H/xampp_5.5.0/htdocs/mage/pages/logout/logout-page.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/logout/logoutPageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/User/UserSystem.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/logout/logged-out.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/logout/logged-out-error.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/login-form.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/fragments/baseContent.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/base.php",
+		"/H/xampp_5.5.0/htdocs/mage/login.php",
+		"/H/_QUT/INB371/assessment 1/QUTSaS/QUTSaS.cbp",
+		"/H/_QUT/INB371/assessment 1/QUTSaS/QUTSaS.depend",
+		"/H/_QUT/INB371/assessment 1/QUTSaS/QUTSaS.layout",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/Error/ErrorDictionary.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/logout.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/logout/pageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/login/pageModule.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/User/UserManagement.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/User/UserLogout.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/User/UserLogin.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/User/UserRegistration.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/inc/UserRegistration.php",
+		"/H/xampp_5.5.0/htdocs/mage/pages/index/pageModule.php",
+		"/H/xampp_5.5.0/htdocs/nirv/index.php",
+		"/H/xampp_5.5.0/htdocs/nirv/bootstrap/bootstrap.php",
+		"/H/xampp_5.5.0/htdocs/nirv/router/router.php",
+		"/H/xampp_5.5.0/htdocs/nirv/.htaccess",
+		"/H/xampp_5.5.0/htdocs/mage/system/config.php",
+		"/H/xampp_5.5.0/htdocs/mage/system/adsf.php",
+		"/H/xampp_5.5.0/htdocs/Mage/system/config.php",
+		"/H/xampp_5.5.0/htdocs/Mage/system/inc/Database.php",
+		"/H/xampp_5.5.0/htdocs/Mage/system/main.php",
+		"/H/xampp_5.5.0/htdocs/Mage/index.php",
+		"/H/xampp_5.5.0/htdocs/Mage/system/inc/UserRegistration.php",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/index.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/register.php",
+		"/I/inb371/assessment 1/Assessment_1_n8824088/Assessment_1_n8824088.cbp",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_final/doxygen/doxyfile",
+		"/H/_QUT/INB371/week 2/tute/MakePointerArray.cpp",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/Assessment_1_n8824088.cbp",
+		"/C/Users/scoot/Downloads/solution_7.c",
+		"/I/inb371/assessment 1/Assessment_1_n8824088/include/schedule.h",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/include/StaffBooking.h",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/src/StaffBooking.cpp",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/main.cpp",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/include/Calendar.h",
+		"/H/_QUT/INB371/assessment 1/Assessment_1_n8824088/src/Calendar.cpp",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/logout.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/system/inc/Database.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/system/actions/login-user.php",
+		"/H/xampp/htdocs/INB302/QWARTZ/sys/users.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/index.html",
+		"/H/xampp_5.5.0/apache/conf/extra/httpd-vhosts.conf",
+		"/H/xampp/htdocs/INB302/QWARTZ/sys/system.php",
+		"/H/xampp/htdocs/wunderground/app/UserRegistration.php",
+		"/H/xampp/htdocs/wunderground/app/Main.php",
+		"/H/xampp/htdocs/wunderground/api/user.php",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/style.scss",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/partials/_profile-cards.scss",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/_mixins.scss",
+		"/H/xampp_5.5.0/phpMyAdmin/config.inc.php",
+		"/H/xampp/phpMyAdmin/config.inc.php",
+		"/C/Users/scoot/AppData/Roaming/Sublime Text 2/Packages/Flex/README.md",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/partials/_typography.scss",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/_reset.sass",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/partials/profile-cards.scss",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/partials/typography.scss",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/sass_here.bat",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/partials/profile-cards.css",
+		"/H/xampp_5.5.0/htdocs/QUTCode/Skills Profile/styles/_colours.scss"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Users",
+			":",
+			"PETERRIVER",
+			":",
+			"padeData",
+			"$postArticle",
+			"	`",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"Vector",
+			"vector",
+			"class=\"news-item\"",
+			");\n",
+			"backgroundGrey",
+			"outlineGrey",
+			"outlineRed",
+			"backgroundRed",
+			"Red",
+			"^.{22}",
+			"                       ",
+			"                      ",
+			".(\\s{22})",
+			"(\\s{22})\\s*",
+			"\\n\\s{22}",
+			"\\n{22}\\s",
+			"{22}\\s",
+			"\\s{22}\\s",
+			"\\s{22,22}\\s",
+			"                      ",
+			"                            ",
+			"                           ",
+			"                          ",
+			"                         ",
+			"                        ",
+			"                       ",
+			"                      ",
+			"		echo self::$basePath;\n",
+			"siteConfig",
+			"databaseDetails",
+			"$",
+			"databaseDetails",
+			"$",
+			"self::",
+			"dbQuery",
+			"dbInsert",
+			"jotunga_qutcode",
+			"schedule\\",
+			"schedule",
+			".destroy",
+			"itemToggle",
+			"GenerateUserCookie",
+			"register",
+			"RegisterStatus",
+			"Register",
+			"register",
+			"this->",
+			"username",
+			"RegisterSystem",
+			"SendConfirmationEmail",
+			"ExtractUsername",
+			"HashPassword",
+			"EmailExists",
+			"HashPassword",
+			"	display: flex;\n	flex-direction: row;\n",
+			"class",
+			"0.5",
+			"detail-title",
+			"200",
+			">\n",
+			"				<div class=\"profile-extra-details\"></div>\n",
+			"(.*) = (.*)\\n",
+			"public const string",
+			"string",
+			"(char)3 + ",
+			"dateAuthorArray",
+			"requestUri",
+			"router",
+			"PrivateFunc",
+			"currentSeek",
+			"this",
+			".audioElem",
+			"Player",
+			"player",
+			"Player",
+			":",
+			",",
+			":",
+			"Source",
+			"source",
+			"data-playlist-item data-audio-src",
+			"loadSong",
+			"々",
+			"song",
+			"Q",
+			"a",
+			"playlist-item",
+			"id=\"playlist-item",
+			"href=\"#\"",
+			"fuckoff",
+			"expires",
+			"www.cashmyatm.com.au",
+			"footer-table-value",
+			" colspan=\"2\"",
+			"My Cash",
+			"My Cash Footer Image</div>\n		<!-- END PAGE 1 -->",
+			"invoi",
+			"footer-table-value",
+			"div",
+			"display: block;",
+			"section-header",
+			"10px",
+			"{}",
+			"th",
+			"<td>(\\d{2} \\w{3} \\d{2})</td>",
+			"<td>(\\d+)</td>",
+			"<td>(\\d)*</td>",
+			"<td>(\\d)+</td>",
+			"<td>(\\d,?\\d*.{1}\\d{2,})+</td>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"<add key=\"$1\" value=\"$2\" />",
+			"<td class=\"rebate-date\">$1</td>",
+			"<td class=\"rebate-transactions\">$1</td>",
+			"<td class=\"rebate-value\">$1</td>",
+			">",
+			"<",
+			"<td class=\"hero-table-portrait\" style=\"background-image: url(images/$1.png);\">&nbsp;</td>",
+			"public var $1 {get;set;}",
+			"\\n\"http://www.student.qut.edu.au/studying/units?cal=WONoSelectionString&discipline=$1&prefix=WONoSelectionString\",",
+			"\"http://www.student.qut.edu.au/studying/units?cal=WONoSelectionString&discipline=$1&prefix=WONoSelectionString\"\\n",
+			"\"http://www.student.qut.edu.au/studying/units?cal=WONoSelectionString&discipline=$1&prefix=WONoSelectionString\"",
+			"(\"IN\",\"$1\",\"$2\",\"$3\"),",
+			"(\"BS\",\"$1\",\"$2\",\"$3\"),",
+			"(\"BE\",\"$1\",\"$2\",\"$3\"),",
+			"(\"BV\",\"$1\",\"$2\",\"$3\"),",
+			"\"http://www.student.qut.edu.au/studying/units?cal=WONoSelectionString&discipline=$1&prefix=WONoSelectionString\",",
+			"(\"BV\",\"$1\",\"$2\",\"$3\"),",
+			"(\"DA\",\"$1\",\"$2\",\"$3\"),",
+			"(\"KN\",\"$1\",\"$2\",\"$3\"),",
+			"(\"AM\",\"$1\",\"$2\",\"$3\"),",
+			"(\"AY\",\"$1\",\"$2\",\"$3\"),",
+			"('AY','$1','$2','$3'),",
+			"INSERT INTO `units` (`unitID`,`unitCode`,`unitName`) VALUES ('$1','$2','$3')",
+			"$1,$2,$3"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "system/inc/Database.php",
+					"settings":
+					{
+						"buffer_size": 1615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								700,
+								700
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 186.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/H/xampp/htdocs/INB302/302.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true
+}

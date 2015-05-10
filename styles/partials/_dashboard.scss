@@ -1,0 +1,53 @@
+#dashboard-container {
+	height: 100%;
+	background-color: $siteColour;//darken($siteColour,20%);
+	display: flex;
+}
+#dashboard-menu-container {
+	background-color: #fff;
+	width: 15%;
+	box-shadow: 1px 0px $layoutOutline;
+	.menu-item:last-child {
+
+	}
+}
+.dashboard-message {
+	background-color: $siteBackgroundColour;
+	margin: 1%;
+	border-radius: 5px;
+	padding: 7px;
+}
+.dashboard-item {
+
+	&.active-item {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			right: -1px;
+			background-color: $siteColour;
+			width:1px;
+			height: 100%;
+		}
+	}
+}
+
+#dashboard-content-container {
+	width: 85%;
+	flex-grow: 1;
+	position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	#dashboard-container {
+		width: 100%;
+		flex-direction: column;
+	}
+	#dashboard-menu-container,
+	#dashboard-content-container {
+		width: 100%;
+		margin-bottom: 1%;
+	}
+}

@@ -46,3 +46,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+system/config.php

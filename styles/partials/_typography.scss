@@ -1,0 +1,10 @@
+pre {
+	font-family: monospace;
+	padding: 1%;
+}
+.header {
+	margin: 1%;
+	&.title {
+		border-bottom: 1px solid $fontColour;
+	}
+}
