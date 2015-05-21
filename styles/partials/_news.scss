@@ -1,9 +1,134 @@
-.news-item {
+.news-container {
+
+	padding: 0 1%;
+
+	.news-item {
+		
+		border-bottom: 2px solid $newBlack;
+		margin-bottom: 2%;
+
+		.news-title {
+			text-transform: capitalize;
+		}
+
+		.news-meta {
+
+		}
+		
+		.news-full {
+			padding: 1%;
+			padding-left: 3%;
+
+			p, ol, ul {
+				padding: 1% 0;
+			}
+
+			ol, ul {
+				list-style-type: initial;
+				list-style-position: inside;
+				padding-left: 2%;
+			}
+
+			blockquote > p {
+				border-left: 2px solid $newBlack;
+				margin: 1%;
+				margin-left: 2%;
+				padding: 0;
+				padding-left: 1%;
+			}
+
+			h1 {
+				font-size: 1.5em;
+			}
+			h2 {
+				font-size: 1.2em;
+			}
+			
+			&.overflow {
+				overflow: hidden;
+				position: relative;
+				&:after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					content: " ";
+					height: 25%;
+					width: 100%;
+
+					pointer-events: none;
+
+					// no no no no god no please no no
+					// no
+					background: rgba(252,252,252,0);
+					background: linear-gradient(to bottom, rgba(252,252,252,0) 0%, rgba(255,255,255,1) 65%);
+					// nooooooooooooooooooooooooooooooooooooooooooooooooo
+
+				}
+			}
+			.read-more {
+				position: absolute;
+				bottom: 1%;
+				z-index: 1;
+				width: 100%;
+				text-align: center;
+				a {
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
 }
-.news-title {
+
+@media only screen and (max-width: 1024px) {
+	.news-container {
+		padding: 0 2%;
+		.news-item {
+			margin-bottom: 6%;
+
+			border-bottom: 2px solid $newBlack;
+
+			.news-full {
+				padding: 3%;
+
+				p, ol, ul {
+					padding: 3% 0;
+				}
+
+				h1,h2,h3,h4,h5,h6 {
+					padding: 1% 0;
+				}
+
+				ol, ul {
+					list-style-type: initial;
+					list-style-position: inside;
+					padding-left: 2%;
+				}
+
+				blockquote > p {
+					border-left: 2px solid $newBlack;
+					margin: 1%;
+					margin-left: 2%;
+					padding: 0;
+					padding-left: 1%;
+				}
+
+				h1 {
+					font-size: 1.5em;
+				}
+				
+				h2 {
+					font-size: 1.2em;
+				}
+
+				pre {
+					width: 100%;
+					overflow-y: scroll;
+				}
+			}
+		}
+	}
 }
-.news-meta {
-}
+
 .news-short {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -24,10 +149,21 @@
 		padding: 10px;
 		background-color: #fff;
 		width: calc(50% - 10px);
-		height: 125px;
+
+	}
+	.news-title {
+		font-weight: bold;
+	}
+	.news-meta {
+		padding-left: 10px;
+		font-style: italic;
+	}
+	.news-short {
+		padding-top: 10px;
+
+		height: 100px;
 		overflow: hidden;
 		position: relative;
-
 		&:after {
 			position: absolute;
 			bottom: 0;
@@ -45,16 +181,26 @@
 			// nooooooooooooooooooooooooooooooooooooooooooooooooo
 
 		}
+	}
+	.news-menu {
+	}
+}
 
+
+.news-list-item {
+
+	border: 1px solid $layoutOutline;
+	background-color: #fff;
+	margin: 10px;
+	padding: 5px;
+	
+	.news-list-title {
 	}
-	.news-title {
-		font-weight: bold;
+	.news-list-date {
+		margin-bottom: 1%;
+		
 	}
-	.news-meta {
-		padding-left: 10px;
-		font-style: italic;
-	}
-	.news-short {
-		padding-top: 10px;
+	.news-list-options {
+		
 	}
 }

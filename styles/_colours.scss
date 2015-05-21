@@ -36,7 +36,9 @@ $ASBESTOS: #7F8C8D;
 $QUTBlue : #003866;
 $otherBlue : #0E487F;
 
-$siteColour : hsla(275,100%,50%,1);
+$mageDefault : hsla(275,100%,50%,1);
+
+$siteColour : $otherBlue;//$mageDefault;
 
 $siteBackgroundColour: mix(#fff,$siteColour,97%);
 //$siteBackgroundColour: hsla(300,5%,30%,1);

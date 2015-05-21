@@ -4,7 +4,27 @@ pre {
 }
 .header {
 	margin: 1%;
+	&.dashboard-title {
+		background-color: #fff;
+		padding: 5px;
+		border-radius: 3px;
+	}
 	&.title {
 		border-bottom: 1px solid $fontColour;
+	}
+}
+
+a {
+	color: $siteColour;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: underline;
+	}
+	&.safe {
+		color: $NEPHRITIS;
+	}
+	&.danger {
+		color: #f00;
 	}
 }

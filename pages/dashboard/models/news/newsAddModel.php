@@ -42,7 +42,7 @@ class NewsAddModel extends Dashboard {
 
 	private function format_short($bodyText) {
 
-		preg_match_all('/((.*?)\\n)/',trim($bodyText),$someMatch);
+		preg_match_all('/(.){250}/s',trim($bodyText),$someMatch);
 		array_filter($someMatch);
 
 		if(isset($someMatch[0][0])){

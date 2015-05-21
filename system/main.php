@@ -95,6 +95,38 @@ class Main {
 		include "pages/fragments/navigation.php";
 	}
 
+	public function ParseActions($urlOffset) {
+
+		$requestUrl = explode("/",$_SERVER["REQUEST_URI"]);
+
+		// reduce the url to words only, removing all empty (false) values
+		// php has a dumb eval system though, so this'll probably break
+		$requestUrl = array_values(array_filter($requestUrl));
+
+		if(@$requestUrl[$urlOffset]) {
+			for($i = 0; $i < $urlOffset; $i++){
+				array_shift($requestUrl);			
+			}
+			return $requestUrl;
+		} else {
+			return "default";
+		}
+	}
+
+	public function AdjustDate($date) {
+
+		$datePosted = new DateTime($date,new DateTimeZone("Etc/GMT+10"));
+		return date("d/m/Y - h:mA",$datePosted->format("U"));
+
+	}
+
+	public function UrlifyArticleTitle($title,$databaseID) {
+		$titleArray = preg_replace('/[^A-Za-z0-9-\s]/', '', $title);
+		$titleArray = strtolower($title);
+		$titleArray = preg_replace("/\s/", '-', $titleArray);
+		return "$titleArray-$databaseID";
+	}
+
 }
 
 $Main = new Main();

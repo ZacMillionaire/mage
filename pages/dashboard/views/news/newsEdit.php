@@ -29,7 +29,7 @@
 <?php } ?>
 
 <?php if(!isset(self::$pageData["articleLink"])){ ?>
-<div class="header title">
+<div class="header dashboard-title">
 	<h1>Edit Article</h1>
 </div>
 <div class="form-section">

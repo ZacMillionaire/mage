@@ -49,4 +49,8 @@ $RECYCLE.BIN/
 
 system/config.php
 
-*.sublime*
+mage.sublime-workspace
+
+*.exe
+*.sql
+*.zip

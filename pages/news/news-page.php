@@ -1,7 +1,30 @@
 <div class="header title">
-	<h1>Latest News</h1>
+	<h1>News Archive</h1>
 </div>
 <div class="news-container">
+
+	<div class="news-pagination">
+		<?php
+			if(self::$pageData["pages"] > 1){
+				for($i = 1; $i <= self::$pageData["pages"]; $i++){
+					if(self::$pageData["currentPage"] == $i){
+					?>
+					<div class="pagination-index current"><?php echo $i; ?></div>
+					<?php	
+					} else {
+					?>
+					<div class="pagination-index">
+						<a href="news/p/<?php echo $i; ?>">
+							<?php echo $i; ?>
+						</a>
+					</div>
+					<?php	
+					}
+				}
+			}
+		?>
+	</div>
+
 	<?php
 		// coming from dashboard::pageData, set in newsModel.php
 		foreach(self::$pageData["newsList"] as $key => $value){
@@ -32,11 +55,28 @@
 	</div>
 	<?php
 		}
+	?>
 
-		if(count(self::$pageData["newsList"]) == 5){
-	?>
-	<a href="news/p/1">Click here to read previous entries</a>
-	<?php
-		}
-	?>
+	<div class="news-pagination">
+		<?php
+			if(self::$pageData["pages"] > 1){
+				for($i = 1; $i <= self::$pageData["pages"]; $i++){
+					if(self::$pageData["currentPage"] == $i){
+					?>
+					<div class="pagination-index current"><?php echo $i; ?></div>
+					<?php	
+					} else {
+					?>
+					<div class="pagination-index">
+						<a href="news/p/<?php echo $i; ?>">
+							<?php echo $i; ?>
+						</a>
+					</div>
+					<?php	
+					}
+				}
+			}
+		?>
+	</div>
+
 </div>
