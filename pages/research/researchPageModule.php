@@ -1,6 +1,6 @@
 <?php
 
-class News extends Main {
+class Research extends Main {
 
 	private static $basePath;
 	protected static $db, $pageData; 
@@ -9,7 +9,7 @@ class News extends Main {
 
 		self::$basePath = get_include_path();
 		
-		$sys->SetPageTitle("News");
+		$sys->SetPageTitle("Research");
 
 		self::$db = $sys->DatabaseSystem();
 
@@ -19,15 +19,15 @@ class News extends Main {
 
 			@$page = (isset($actions[1])) ? $actions[1] : 1;
 			self::$pageData["currentPage"] = $page;
-			self::GetNewsList($page);
-			include "news-page.php";
+			self::GetResearchEntryList($page);
+			include "research-page.php";
 
 		} elseif($actions == "default") {
 
 			@$page = (isset($actions[0]) && $actions[0] == "p") ? $actions[1] : 1;
 			self::$pageData["currentPage"] = $page;
-			self::GetNewsList($page);
-			include "news-page.php";
+			self::GetResearchEntryList($page);
+			include "research-page.php";
 
 		} else {
 
@@ -36,20 +36,20 @@ class News extends Main {
 			// reduce the url to words only, removing all empty (false) values
 			// php has a dumb eval system though, so this'll probably break
 			$requestUrl = array_reverse(array_values(array_filter($requestUrl)));
-			$newsID = array_reverse(explode("-", $requestUrl[0]));
-			self::GetNewsArticle($newsID[0]);
-			include "news-article.php";
+			$researchID = array_reverse(explode("-", $requestUrl[0]));
+			self::GetNewsArticle($researchID[0]);
+			include "research-entry.php";
 
 		}
 
 
 	}
 
-	private function GetNewsList($page) {
+	private function GetResearchEntryList($page) {
 
 		$perPage = 5;
 
-		$sql = "SELECT *,(SELECT COUNT(`newsID`) FROM `news`) as `articles` FROM `news` ORDER BY `datePosted` DESC LIMIT :lower, :upper;";
+		$sql = "SELECT *,(SELECT COUNT(`researchID`) FROM `research`) as `entries` FROM `research` ORDER BY `researchID` DESC LIMIT :lower, :upper;";
 		$params = array(
 			"lower" => $perPage*($page-1),
 			"upper" => $perPage+($perPage*($page-1))
@@ -68,25 +68,27 @@ class News extends Main {
 
 		}
 
-		self::$pageData["newsList"] = $result;
-		self::$pageData["articles"] = $result[0]['articles'];
-		self::$pageData["pages"] = ceil(self::$pageData["articles"]/$perPage);
+		self::$pageData["researchEntriesList"] = $result;
+		self::$pageData["entries"] = $result[0]['entries'];
+		self::$pageData["pages"] = ceil(self::$pageData["entries"]/$perPage);
 	}
 
-	private function GetNewsArticle($newsID) {
+	private function GetNewsArticle($researchID) {
 
-		$sql = "SELECT * FROM `news` WHERE `newsID` = :newsID;";
+		$sql = "SELECT * FROM `research` WHERE `researchID` = :researchID;";
 		$params = array(
-			"newsID" => $newsID
+			"researchID" => $researchID
 			);
 
 		$result = self::$db->Query($sql,$params);
 
 		self::$pageData["ToC"] = Main::GenerateToC($result[0]["full_body"]);
+
 		$Markdown = new Parsedown();
 		$result[0]["full_body"] = $Markdown->text($result[0]["full_body"]);
 
-		self::$pageData["article"] = $result[0];
+		self::$pageData["researchEntry"] = $result[0];
+
 	}
 
 }

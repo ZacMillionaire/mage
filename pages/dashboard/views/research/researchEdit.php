@@ -65,7 +65,7 @@
 		</div>
 		<div class="form-button full-width">
 			<button class="blue" type="submit" name="action" value="preview">Preview</button>
-			<button class="green" type="submit" name="action" value="post">Update</button>
+			<button class="green" type="submit" name="action" value="post">Edit</button>
 		</div>
 	</form>
 </div>

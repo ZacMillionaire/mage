@@ -6,6 +6,9 @@
 	<li class="menu-item">
 		<a href="/mage/news/">News</a>
 	</li>
+	<li class="menu-item">
+		<a href="/mage/research/">Research</a>
+	</li>
 	<?php if(!$Main->UserStatus["loggedIn"]) { ?>
 	<li class="menu-item">
 		<a href="/mage/login/">Login</a><!--<a href="register">Register</a>-->

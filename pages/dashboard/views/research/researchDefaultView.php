@@ -11,7 +11,7 @@
 		<div class="news-title"><?php echo $value["title"]; ?></div>
 		<div class="news-meta">
 			<div class="meta-start-date">
-				Started: <?php echo Main::AdjustDate($value["dateStarted"]); ?>
+				Started: <?php echo Main::AdjustDate($value["dateStarted"],false); ?>
 			</div>
 			<div class="meta-end-date">
 				Ended: <?php
@@ -19,7 +19,7 @@
 				if($value["dateEnded"] === null) {
 					echo "(On going)";
 				} else {
-					echo Main::AdjustDate($value["dateEnded"]);			
+					echo Main::AdjustDate($value["dateEnded"],false);			
 				}
 
 				?>

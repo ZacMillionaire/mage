@@ -15,6 +15,18 @@
 			}
 			?>
 		</div>
+		<div class="article-toc">
+			Table of contents
+			<ol class="article-toc-container" id="top">
+			<?php 
+			foreach(self::$pageData["ToC"] as $key => $value) {
+			?>
+				<li class="toc-level-<?php echo $value["depth"] ?>"><a href="#<?php echo $value["title"]; ?>"><?php echo $value["title"]; ?></a></li>
+			<?php
+			}
+			?>
+			</ol>
+		</div>
 		<div class="news-full">
 			<?php echo self::$pageData["article"]["full_body"]; ?>
 		</div>

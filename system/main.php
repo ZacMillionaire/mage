@@ -113,10 +113,13 @@ class Main {
 		}
 	}
 
-	public function AdjustDate($date) {
+	public function AdjustDate($date,$time = true) {
 
 		$datePosted = new DateTime($date,new DateTimeZone("Etc/GMT+10"));
-		return date("d/m/Y - h:mA",$datePosted->format("U"));
+		if($time){			
+			return date("d/m/Y - h:mA",$datePosted->format("U"));
+		}
+		return date("d/m/Y",$datePosted->format("U"));
 
 	}
 
@@ -127,6 +130,41 @@ class Main {
 		return "$titleArray-$databaseID";
 	}
 
+	// gets all headers and generates a toc based on their location in the text
+	public function GenerateToC($body) {
+
+		$headers = array();
+
+		for($i = 1; $i <= 6; $i++) {
+			$re = "/^#{".$i."}([\w|\s].*?)$/m"; 
+			preg_match_all($re, $body, $matches,PREG_OFFSET_CAPTURE);
+			
+			foreach ($matches[1] as $key => $value) {
+				$header = array(
+					"depth" => $i,
+					"title" => trim($value[0]),
+					"pos" => $value[1]
+				);
+				array_push($headers, $header);
+			}		
+		}
+
+		uasort($headers, "self::HeaderSort");
+
+		return $headers;
+
+		//" <a href=\"#top\"><i class=\"fa fa-chevron-circle-up\"></i></a>"
+	}
+
+	private function HeaderSort($a,$b) {
+
+		if($a["pos"] > $b["pos"]){
+			return 1;
+		} else  {
+			return -1;
+		}
+
+	}
 }
 
 $Main = new Main();

@@ -1,6 +1,6 @@
 <?php 
 
-class ResearchEditModel extends Dashboard {
+class ResearchUpdateModel extends Dashboard {
 
 	protected static $db; 
 
@@ -34,43 +34,30 @@ class ResearchEditModel extends Dashboard {
 		$params = array("researchID"=>$researchID);
 
 		parent::$pageData["researchEntryData"] = self::$db->Query($sql,$params)[0];
-
-		parent::$pageData["researchEntryData"]["dateStarted"] = date("d/m/Y", strtotime(parent::$pageData["researchEntryData"]["dateStarted"]));
-		if(parent::$pageData["researchEntryData"]["dateEnded"] != null) {
-			parent::$pageData["researchEntryData"]["dateEnded"] = date("d/m/Y", strtotime(parent::$pageData["researchEntryData"]["dateEnded"]));		
-		}
 	}
 
 	public function PreviewEntry($data) {
 		$Markdown = new Parsedown();
-		parent::$pageData["researchPreview"] = $Markdown->text($data["body"]);
-		self::GenerateToC($data);
+		parent::$pageData["updatePreview"] = $Markdown->text($data["updateBody"]);
 	}
 
 	public function ReParseInput($formData){
 
-		$dateStart = explode("/", $formData["dateStarted"]);
-		$dateStart = date("Y-m-d H:i:s T", strtotime($dateStart[1]."/".$dateStart[0]."/".$dateStart[2]));
-
-		$dateEnd = null;
-		if($formData["dateEnded"] != null) {
-			$dateEnd = explode("/", $formData["dateEnded"]);
-			$dateEnd = date("Y-m-d H:i:s T", strtotime($dateEnd[1]."/".$dateEnd[0]."/".$dateEnd[2]));	
-		}
+		parent::$pageData["researchEntryData"]["full_body"] .= "\n"."#".$formData["updateTitle"]."\n".$formData["updateBody"];
 
 		$researchItem = array(
-			"title" => $formData["title"],
-			"dateStarted" => $dateStart,
-			"dateEnded" => $dateEnd,
-			"short_body" => self::format_short($formData["body"]),
-			"full_body" => trim($formData["body"]),
+			"title" => parent::$pageData["researchEntryData"]["title"],
+			"dateStarted" => parent::$pageData["researchEntryData"]["dateStarted"],
+			"dateEnded" => parent::$pageData["researchEntryData"]["dateEnded"],
+			"short_body" => self::format_short(parent::$pageData["researchEntryData"]["full_body"]),
+			"full_body" => trim(parent::$pageData["researchEntryData"]["full_body"]),
 			"researchID" => parent::$pageData["researchEntryData"]["researchID"]
 		);
 
 		$result = self::UpdateArticleInDatabase($researchItem);
 
 		if($result != false){
-			parent::$pageData["researchEntryLink"] = self::UrlifyArticleTitle($formData["title"],parent::$pageData["researchEntryData"]["researchID"]);	
+			parent::$pageData["researchEntryLink"] = self::UrlifyArticleTitle(parent::$pageData["researchEntryData"]["title"],parent::$pageData["researchEntryData"]["researchID"]);	
 		} else {
 			print_r($result);
 		}

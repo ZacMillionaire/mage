@@ -27,7 +27,7 @@ class ResearchAddModel extends Dashboard {
 
 		$dateEnd = null;
 
-		if(isset($formData["dateEnded"])) {
+		if($formData["dateEnded"] != null) {
 			$dateEnd = explode("/", $formData["dateEnded"]);
 			$dateEnd = date("Y-m-d H:i:s T", strtotime($dateEnd[1]."/".$dateEnd[0]."/".$dateEnd[2]));	
 		}
