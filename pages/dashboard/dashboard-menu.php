@@ -3,31 +3,31 @@
 $menu = '
 	<ul class="side-menu">
 		<li class="menu-item dashboard-item">
-			<a href="./">Home</a>
+			<a href="/mage">Home</a>
 		</li>
 		<li class="menu-item dashboard-item">
-			<a href="logout/">Logout</a>
+			<a href="/mage/logout/">Logout</a>
 		</li>
 		<li class="menu-separator dashboard-item">
 			Dashboard
 		</li>
 		<li class="menu-item {{active-index}} dashboard-item">
-			<a href="dashboard/">Overview</a>
+			<a href="/mage/dashboard/">Overview</a>
 		</li>
 		<li class="menu-item {{active-news}} dashboard-item">
-			<a href="dashboard/news/">News</a>
+			<a href="/mage/dashboard/news/">News</a>
 		</li>
 		<li class="menu-item {{active-research}} dashboard-item">
-			<a href="dashboard/research/">Research</a>
+			<a href="/mage/dashboard/research/">Research</a>
 		</li>
 		<li class="menu-item {{active-publications}} dashboard-item">
-			<a href="dashboard/publications/">Publications</a>
+			<a href="/mage/dashboard/publications/">Publications</a>
 		</li>
 		<li class="menu-item {{active-social}} dashboard-item">
-			<a href="dashboard/social/">Social Media</a>
+			<a href="/mage/dashboard/social/">Social Media</a>
 		</li>
 		<li class="menu-item {{active-biography}} dashboard-item">
-			<a href="dashboard/biography/">Biography</a>
+			<a href="/mage/dashboard/biography/">Biography</a>
 		</li>
 	</ul>
 ';

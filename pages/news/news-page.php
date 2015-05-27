@@ -14,7 +14,7 @@
 					} else {
 					?>
 					<div class="pagination-index">
-						<a href="news/p/<?php echo $i; ?>">
+						<a href="/mage/news/p/<?php echo $i; ?>">
 							<?php echo $i; ?>
 						</a>
 					</div>
@@ -35,11 +35,11 @@
 			<?php
 			echo parent::AdjustDate($value["datePosted"]);
 			?>
-			<a href="news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
+			<a href="/mage/news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
-			&bull; <a href="dashboard/news/edit/<?php echo $value["newsID"]; ?>">Edit</a>
+			&bull; <a href="/mage/dashboard/news/edit/<?php echo $value["newsID"]; ?>">Edit</a>
 			<?php
 			}
 			?>
@@ -48,7 +48,7 @@
 			<?php echo $value["full_body"]; ?>
 			<?php if($value["overflow"] == "overflow"){ ?>
 			<div class="read-more">
-				<a href="news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
+				<a href="/mage/news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
 			</div>
 			<?php } ?>
 		</div>
@@ -68,7 +68,7 @@
 					} else {
 					?>
 					<div class="pagination-index">
-						<a href="news/p/<?php echo $i; ?>">
+						<a href="/mage/news/p/<?php echo $i; ?>">
 							<?php echo $i; ?>
 						</a>
 					</div>

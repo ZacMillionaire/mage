@@ -10,19 +10,19 @@ class NewsModel extends Dashboard {
 
 		if($actions === "default"){
 
-			include "news/newsDefaultModel.php";
+			include "newsDefaultModel.php";
 			$class = "NewsDefaultModel";
 			new $class();
-			parent::IncludeView("news/newsView.php");	
+			parent::IncludeView("news/newsDefaultView.php");	
 
 		} elseif(isset($actions[0])) {
 			if(
 				is_file("pages/dashboard/views/news/news".ucfirst($actions[0]).".php")
 				&&
-				is_file("pages/dashboard/models/news".ucfirst($actions[0])."Model.php")
+				is_file("pages/dashboard/models/news/news".ucfirst($actions[0])."Model.php")
 			) {
 
-				include "news/news".ucfirst($actions[0])."Model.php";
+				include "news".ucfirst($actions[0])."Model.php";
 				$class = "News".ucfirst($actions[0])."Model";
 				new $class();
 
@@ -32,7 +32,7 @@ class NewsModel extends Dashboard {
 				include "newsDefaultModel.php";
 				$class = "NewsDefaultModel";
 				new $class();
-				parent::IncludeView("news/newsView.php");
+				parent::IncludeView("news/newsDefaultView.php");
 			}
 		}
 

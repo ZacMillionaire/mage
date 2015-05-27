@@ -50,6 +50,7 @@ $RECYCLE.BIN/
 system/config.php
 
 mage.sublime-workspace
+mage.sublime-project
 
 *.exe
 *.sql

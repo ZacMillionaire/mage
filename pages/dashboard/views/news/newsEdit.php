@@ -13,7 +13,7 @@
 	<div class="header title">
 		<h1>Article Updated</h1>
 	</div>
-	<a href="news/<?php echo self::$pageData["articleLink"]; ?>">View Updated Article</a>
+	<a href="/mage/news/<?php echo self::$pageData["articleLink"]; ?>">View Updated Article</a>
 </div>
 <?php } ?>
 
@@ -37,7 +37,7 @@
 		We use markdown!
 		some markdown hints or w/e
 	</div>
-	<form action="dashboard/news/edit/<?php echo @self::$pageData["articleData"]["newsID"]; ?>" method="POST">
+	<form action="/mage/dashboard/news/edit/<?php echo @self::$pageData["articleData"]["newsID"]; ?>" method="POST">
 		<div class="form-input">
 			<input type="text" placeholder="Title" name="title" value="<?php echo (isset($_POST["title"])) ? $_POST["title"] : self::$pageData["articleData"]["title"]; ?>" required pattern="(\w+\s?)+"/>
 		</div>

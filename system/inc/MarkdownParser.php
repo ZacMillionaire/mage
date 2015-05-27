@@ -485,7 +485,7 @@ class Parsedown
 
             $Block = array(
                 'element' => array(
-                    'name' => 'h' . min(6, $level),
+                    'name' => 'h' . min(6, $level) .' id="'.$text.'"', // edit to add ids of header to replacements
                     'text' => $text,
                     'handler' => 'line',
                 ),

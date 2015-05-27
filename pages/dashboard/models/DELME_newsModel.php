@@ -13,7 +13,7 @@ class NewsModel extends Dashboard {
 			include "news/newsDefaultModel.php";
 			$class = "NewsDefaultModel";
 			new $class();
-			parent::IncludeView("news/newsView.php");	
+			parent::IncludeView("news/newsDefaultView.php");	
 
 		} elseif(isset($actions[0])) {
 			if(
@@ -32,7 +32,7 @@ class NewsModel extends Dashboard {
 				include "news/newsDefaultModel.php";
 				$class = "NewsDefaultModel";
 				new $class();
-				parent::IncludeView("news/newsView.php");
+				parent::IncludeView("news/newsDefaultView.php");
 			}
 		}
 

@@ -7,7 +7,7 @@
 	<h1>Delete Article</h1>
 </div>
 <div class="form-section">
-	<form action="dashboard/news/delete/<?php echo @self::$pageData["articleData"]["newsID"]; ?>" method="POST">
+	<form action="/mage/dashboard/news/delete/<?php echo @self::$pageData["articleData"]["newsID"]; ?>" method="POST">
 
 		<div class="form-error">
 			<div class="form-error-header">
@@ -46,6 +46,6 @@
 	<div class="header title">
 		<h1>Article Deleted</h1>
 	</div>
-	<a href="dashboard/news/list/">Return to List</a>
+	<a href="/mage/dashboard/news/list/">Return to List</a>
 </div>
 <?php } ?>

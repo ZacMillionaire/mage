@@ -42,7 +42,7 @@ class Dashboard {
 
 	private function LoadModule($page) {
 
-		$filePath = "pages/dashboard/models/".strtolower($page)."Model.php";
+		$filePath = "pages/dashboard/models/".strtolower($page)."/".strtolower($page)."Model.php";
 		if(is_file($filePath)) {
 			self::$sys->SetPageSubTitle($page);
 			include $filePath;

@@ -31,7 +31,7 @@
 		We use markdown!
 		some markdown hints or w/e
 	</div>
-	<form action="dashboard/news/add" method="POST">
+	<form action="/mage/dashboard/news/add" method="POST">
 		<div class="form-input">
 			<input type="text" placeholder="Title" name="title" value="<?php echo @$_POST["title"]; ?>" required pattern="(\w+\s?)+"/>
 		</div>

@@ -20,9 +20,9 @@ foreach(self::$pageData["newsList"] as $key => $value) {
 
 	?></div>
 	<div class="news-list-options">
-		<a class="safe" href="dashboard/news/edit/<?php echo $value["newsID"]; ?>">Edit</a>
+		<a class="safe" href="/mage/dashboard/news/edit/<?php echo $value["newsID"]; ?>">Edit</a>
 		&bull;
-		<a class="danger" href="dashboard/news/delete/<?php echo $value["newsID"]; ?>">Delete</a>
+		<a class="danger" href="/mage/dashboard/news/delete/<?php echo $value["newsID"]; ?>">Delete</a>
 	</div>
 </div>
 <?php

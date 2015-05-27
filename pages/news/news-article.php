@@ -10,7 +10,7 @@
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
-			&bull; <a href="dashboard/news/edit/<?php echo self::$pageData["article"]["newsID"]; ?>">Edit</a>
+			&bull; <a href="/mage/dashboard/news/edit/<?php echo self::$pageData["article"]["newsID"]; ?>">Edit</a>
 			<?php
 			}
 			?>
