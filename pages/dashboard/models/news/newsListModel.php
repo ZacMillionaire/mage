@@ -5,8 +5,8 @@ class NewsListModel extends Dashboard {
 	protected static $db; 
 
 	public function __construct(){
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 
 		@$actions[1] = (!isset($actions[1])) ? 0 : $actions[1];
 		self::GetNewsList($actions[1]);
@@ -23,7 +23,7 @@ class NewsListModel extends Dashboard {
 
 		$result = self::$db->Query($sql,$params);
 
-		parent::$pageData["newsList"] = $result;
+		Main::$pageData["newsList"] = $result;
 	}
 
 }

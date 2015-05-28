@@ -2,12 +2,12 @@
 	include "newsMenu.php";
 ?>
 
-<?php if(!isset($_POST["action"]) && !isset(self::$pageData["deleted"])) { ?>
+<?php if(!isset($_POST["action"]) && !isset(Main::$pageData["deleted"])) { ?>
 <div class="header title">
 	<h1>Delete Article</h1>
 </div>
 <div class="form-section">
-	<form action="/mage/dashboard/news/delete/<?php echo @self::$pageData["articleData"]["newsID"]; ?>" method="POST">
+	<form action="/mage/dashboard/news/delete/<?php echo @Main::$pageData["articleData"]["newsID"]; ?>" method="POST">
 
 		<div class="form-error">
 			<div class="form-error-header">
@@ -19,15 +19,15 @@
 			<div class="form-error-body">
 			<?php
 
-				if(isset(self::$pageData["error"])){
-					echo self::$pageData["error"];	
+				if(isset(Main::$pageData["error"])){
+					echo Main::$pageData["error"];	
 				} else {
 			?>
 				<div class="article-header">
-					<h1><?php echo self::$pageData["articleData"]["title"]; ?></h1>
+					<h1><?php echo Main::$pageData["articleData"]["title"]; ?></h1>
 				</div>
 				<div class="article-body">
-					<?php echo self::$pageData["articleData"]["full_body"]; ?>
+					<?php echo Main::$pageData["articleData"]["full_body"]; ?>
 				</div>
 			<?php
 				}
@@ -41,7 +41,7 @@
 		</div>
 	</form>
 </div>
-<?php } elseif(self::$pageData["deleted"]===true){ ?>
+<?php } elseif(Main::$pageData["deleted"]===true){ ?>
 <div class="dashboard-message">
 	<div class="header title">
 		<h1>Article Deleted</h1>

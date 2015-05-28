@@ -3,7 +3,7 @@
 class Index extends Main {
 
 	private static $basePath;
-	protected static $db, $pageData; 
+	protected static $db; 
 
 	public function LoadView($sys) {
 
@@ -42,7 +42,7 @@ class Index extends Main {
 
 		}
 
-		self::$pageData["newsList"] = $result;
+		Main::$pageData["newsList"] = $result;
 	}
 
 }

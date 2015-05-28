@@ -6,8 +6,8 @@ class NewsEditModel extends Dashboard {
 
 	public function __construct(){
 
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 		self::GetArticleData($actions[1]);
 
 		if(isset($_POST["action"])){
@@ -32,29 +32,29 @@ class NewsEditModel extends Dashboard {
 
 		$sql = "SELECT * FROM `news` WHERE `newsID` = :newsID;";
 		$params = array("newsID"=>$articleID);
-		parent::$pageData["articleData"] = self::$db->Query($sql,$params)[0];
+		Main::$pageData["articleData"] = self::$db->Query($sql,$params)[0];
 	}
 
 	public function PreviewArticle($data) {
 		$Markdown = new Parsedown();
-		parent::$pageData["ArticlePreview"] = $Markdown->text($data["body"]);
+		Main::$pageData["ArticlePreview"] = $Markdown->text($data["body"]);
 	}
 
 	public function ReParseInput($formData){
 
 		$newsItem = array(
-			"datePosted" => parent::$pageData["articleData"]["datePosted"],
+			"datePosted" => Main::$pageData["articleData"]["datePosted"],
 			"title" => $formData["title"],
 			"tags" =>$formData["tags"],
 			"short_body" => self::format_short($formData["body"]),
 			"full_body" => trim($formData["body"]),
-			"newsID" => parent::$pageData["articleData"]["newsID"]
+			"newsID" => Main::$pageData["articleData"]["newsID"]
 		);
 
 		$result = self::UpdateArticleInDatabase($newsItem);
 
 		if($result != false){
-			parent::$pageData["articleLink"] = self::UrlifyArticleTitle($formData["title"],parent::$pageData["articleData"]["newsID"]);	
+			Main::$pageData["articleLink"] = self::UrlifyArticleTitle($formData["title"],Main::$pageData["articleData"]["newsID"]);	
 		}
 	}
 
@@ -74,7 +74,7 @@ class NewsEditModel extends Dashboard {
 
 	private function UpdateArticleInDatabase($data) {
 
-		$db = parent::$sys->DatabaseSystem();
+		$db = Dashboard::$sys->DatabaseSystem();
 
 		$sql = "UPDATE `news` SET
 					`datePosted` = :datePosted,

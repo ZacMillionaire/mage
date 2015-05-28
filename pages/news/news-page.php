@@ -5,9 +5,9 @@
 
 	<div class="news-pagination">
 		<?php
-			if(self::$pageData["pages"] > 1){
-				for($i = 1; $i <= self::$pageData["pages"]; $i++){
-					if(self::$pageData["currentPage"] == $i){
+			if(Main::$pageData["pages"] > 1){
+				for($i = 1; $i <= Main::$pageData["pages"]; $i++){
+					if(Main::$pageData["currentPage"] == $i){
 					?>
 					<div class="pagination-index current"><?php echo $i; ?></div>
 					<?php	
@@ -27,15 +27,15 @@
 
 	<?php
 		// coming from dashboard::pageData, set in newsModel.php
-		foreach(self::$pageData["newsList"] as $key => $value){
+		foreach(Main::$pageData["newsList"] as $key => $value){
 	?>
 	<div class="news-item">
 		<div class="news-title"><h1><?php echo $value["title"]; ?></h1></div>
 		<div class="news-meta">
 			<?php
-			echo parent::AdjustDate($value["datePosted"]);
+			echo Main::AdjustDate($value["datePosted"]);
 			?>
-			<a href="/mage/news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
+			<a href="/mage/news/<?php echo Main::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
@@ -48,7 +48,7 @@
 			<?php echo $value["full_body"]; ?>
 			<?php if($value["overflow"] == "overflow"){ ?>
 			<div class="read-more">
-				<a href="/mage/news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
+				<a href="/mage/news/<?php echo Main::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
 			</div>
 			<?php } ?>
 		</div>
@@ -59,9 +59,9 @@
 
 	<div class="news-pagination">
 		<?php
-			if(self::$pageData["pages"] > 1){
-				for($i = 1; $i <= self::$pageData["pages"]; $i++){
-					if(self::$pageData["currentPage"] == $i){
+			if(Main::$pageData["pages"] > 1){
+				for($i = 1; $i <= Main::$pageData["pages"]; $i++){
+					if(Main::$pageData["currentPage"] == $i){
 					?>
 					<div class="pagination-index current"><?php echo $i; ?></div>
 					<?php	

@@ -6,14 +6,14 @@ class NewsModel extends Dashboard {
 
 	public function LoadModel(){
 		
-		$actions = parent::ParseAction();
+		$actions = Dashboard::ParseAction();
 
 		if($actions === "default"){
 
 			include "newsDefaultModel.php";
 			$class = "NewsDefaultModel";
 			new $class();
-			parent::IncludeView("news/newsDefaultView.php");	
+			Dashboard::IncludeView("news/newsDefaultView.php");	
 
 		} elseif(isset($actions[0])) {
 			if(
@@ -26,13 +26,13 @@ class NewsModel extends Dashboard {
 				$class = "News".ucfirst($actions[0])."Model";
 				new $class();
 
-				parent::IncludeView("news/news".ucfirst($actions[0]).".php");
+				Dashboard::IncludeView("news/news".ucfirst($actions[0]).".php");
 			} else {
 				print_r($actions);
 				include "newsDefaultModel.php";
 				$class = "NewsDefaultModel";
 				new $class();
-				parent::IncludeView("news/newsDefaultView.php");
+				Dashboard::IncludeView("news/newsDefaultView.php");
 			}
 		}
 

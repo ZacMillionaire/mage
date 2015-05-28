@@ -35,7 +35,7 @@ class NewsAddModel extends Dashboard {
 		$result = self::InsertIntoDatabase($newsItem);
 
 		if($result != false){
-			parent::$pageData["articleLink"] = self::UrlifyArticleTitle($formData["title"],$result[0]["newsID"]);	
+			Main::$pageData["articleLink"] = Main::UrlifyArticleTitle($formData["title"],$result[0]["newsID"]);	
 		}
 	}
 
@@ -55,7 +55,7 @@ class NewsAddModel extends Dashboard {
 
 	private function InsertIntoDatabase($data) {
 
-		$db = parent::$sys->DatabaseSystem();
+		$db = Dashboard::$sys->DatabaseSystem();
 
 		$sql = "INSERT INTO `news`(
 					`datePosted`,
@@ -87,14 +87,7 @@ class NewsAddModel extends Dashboard {
 
 	public function PreviewArticle($data) {
 		$Markdown = new Parsedown();
-		parent::$pageData["ArticlePreview"] = $Markdown->text($data["body"]);
-	}
-
-	private function UrlifyArticleTitle($title,$databaseID) {
-		$titleArray = preg_replace('/[^A-Za-z0-9-\s]/', '', $title);
-		$titleArray = strtolower($title);
-		$titleArray = preg_replace("/\s/", '-', $titleArray);
-		return "$titleArray-$databaseID";
+		Main::$pageData["ArticlePreview"] = $Markdown->text($data["body"]);
 	}
 
 }

@@ -4,15 +4,15 @@
 <div class="news-container">
 	<?php
 		// coming from dashboard::pageData, set in newsModel.php
-		foreach(self::$pageData["newsList"] as $key => $value){
+		foreach(Main::$pageData["newsList"] as $key => $value){
 	?>
 	<div class="news-item">
 		<div class="news-title"><h1><?php echo $value["title"]; ?></h1></div>
 		<div class="news-meta">
 			<?php
-			echo parent::AdjustDate($value["datePosted"]);
+			echo Main::AdjustDate($value["datePosted"]);
 			?>
-			<a href="news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
+			<a href="news/<?php echo Main::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read</a>
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
@@ -25,7 +25,7 @@
 			<?php echo $value["full_body"]; ?>
 			<?php if($value["overflow"] == "overflow"){ ?>
 			<div class="read-more">
-				<a href="news/<?php echo parent::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
+				<a href="news/<?php echo Main::UrlifyArticleTitle($value["title"],$value["newsID"]); ?>">Read Full Article</a>
 			</div>
 			<?php } ?>
 		</div>
@@ -33,7 +33,7 @@
 	<?php
 		}
 
-		if(count(self::$pageData["newsList"]) == 5){
+		if(count(Main::$pageData["newsList"]) == 5){
 	?>
 	<a href="news/p/1">Click here to read previous entries</a>
 	<?php

@@ -1,15 +1,13 @@
 <?php
 
-// parent refers to Dashboard obv
-// all views access pageData via self::$pageData
 class NewsDeleteModel extends Dashboard {
 
 	protected static $db;
 
 	public function __construct() {
 
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 		self::GetArticleData($actions[1]);
 
 		if(isset($_POST["action"]) && isset($actions[1])){
@@ -28,11 +26,11 @@ class NewsDeleteModel extends Dashboard {
 
 		$result = self::$db->Query($sql,$params);
 		if(empty($result)) {
-			parent::$pageData["error"] = "Article not found";
+			Main::$pageData["error"] = "Article not found";
 		} else {
 			$Markdown = new Parsedown();
-			parent::$pageData["articleData"] = $result[0];
-			parent::$pageData["articleData"]["full_body"] = $Markdown->text(parent::$pageData["articleData"]["full_body"]);
+			Main::$pageData["articleData"] = $result[0];
+			Main::$pageData["articleData"]["full_body"] = $Markdown->text(Main::$pageData["articleData"]["full_body"]);
 		}
 	}
 
@@ -43,7 +41,7 @@ class NewsDeleteModel extends Dashboard {
 
 		$result = self::$db->Delete($sql,$params);
 
-		parent::$pageData["deleted"] = true;
+		Main::$pageData["deleted"] = true;
 
 	}
 

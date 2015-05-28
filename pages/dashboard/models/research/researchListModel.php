@@ -5,8 +5,8 @@ class ResearchListModel extends Dashboard {
 	protected static $db; 
 
 	public function __construct(){
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 
 		@$actions[1] = (!isset($actions[1])) ? 0 : $actions[1];
 		self::GetResearchList($actions[1]);
@@ -23,7 +23,7 @@ class ResearchListModel extends Dashboard {
 
 		$result = self::$db->Query($sql,$params);
 
-		parent::$pageData["researchList"] = $result;
+		Main::$pageData["researchList"] = $result;
 	}
 
 }

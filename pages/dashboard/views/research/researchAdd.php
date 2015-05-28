@@ -2,16 +2,16 @@
 	include "researchMenu.php";
 ?>
 
-<?php if(isset(self::$pageData["researchLink"])){ ?>
+<?php if(isset(Main::$pageData["researchLink"])){ ?>
 <div class="dashboard-message">
 	<div class="header title">
 		<h1>Article Posted</h1>
 	</div>
-	<a href="/mage/research/<?php echo self::$pageData["researchLink"]; ?>">View Article</a>
+	<a href="/mage/research/<?php echo Main::$pageData["researchLink"]; ?>">View Article</a>
 </div>
 <?php } ?>
 
-<?php if(@isset(self::$pageData["researchPreview"])){ ?>
+<?php if(@isset(Main::$pageData["researchPreview"])){ ?>
 <div class="article-preview">
 	<div class="header title">
 		<h1>Article Preview</h1>
@@ -19,7 +19,7 @@
 	<div class="article-toc">
 		<ol class="article-toc-container" id="top">
 		<?php 
-		foreach(self::$pageData["ToC"] as $key => $value) {
+		foreach(Main::$pageData["ToC"] as $key => $value) {
 		?>
 			<li class="toc-level-<?php echo $value["depth"] ?>"><a href="#<?php echo $value["title"]; ?>"><?php echo $value["title"]; ?></a></li>
 		<?php
@@ -28,12 +28,12 @@
 		</ol>
 	</div>
 	<div class="article-container">
-		<?php echo self::$pageData["researchPreview"]; ?>
+		<?php echo Main::$pageData["researchPreview"]; ?>
 	</div>
 </div>
 <?php } ?>
 
-<?php if(!isset(self::$pageData["researchLink"])){ ?>
+<?php if(!isset(Main::$pageData["researchLink"])){ ?>
 <div class="header dashboard-title">
 	<h1>New Research Entry</h1>
 </div>

@@ -3,7 +3,7 @@
 class News extends Main {
 
 	private static $basePath;
-	protected static $db, $pageData; 
+	protected static $db; 
 	
 	public function LoadView($sys) {
 
@@ -18,14 +18,14 @@ class News extends Main {
 		if(isset($actions[0]) && $actions[0] == "p") {
 
 			@$page = (isset($actions[1])) ? $actions[1] : 1;
-			self::$pageData["currentPage"] = $page;
+			Main::$pageData["currentPage"] = $page;
 			self::GetNewsList($page);
 			include "news-page.php";
 
 		} elseif($actions == "default") {
 
 			@$page = (isset($actions[0]) && $actions[0] == "p") ? $actions[1] : 1;
-			self::$pageData["currentPage"] = $page;
+			Main::$pageData["currentPage"] = $page;
 			self::GetNewsList($page);
 			include "news-page.php";
 
@@ -68,9 +68,9 @@ class News extends Main {
 
 		}
 
-		self::$pageData["newsList"] = $result;
-		self::$pageData["articles"] = $result[0]['articles'];
-		self::$pageData["pages"] = ceil(self::$pageData["articles"]/$perPage);
+		Main::$pageData["newsList"] = $result;
+		Main::$pageData["articles"] = $result[0]['articles'];
+		Main::$pageData["pages"] = ceil(Main::$pageData["articles"]/$perPage);
 	}
 
 	private function GetNewsArticle($newsID) {
@@ -82,11 +82,11 @@ class News extends Main {
 
 		$result = self::$db->Query($sql,$params);
 
-		self::$pageData["ToC"] = Main::GenerateToC($result[0]["full_body"]);
+		Main::$pageData["ToC"] = Main::GenerateToC($result[0]["full_body"]);
 		$Markdown = new Parsedown();
 		$result[0]["full_body"] = $Markdown->text($result[0]["full_body"]);
 
-		self::$pageData["article"] = $result[0];
+		Main::$pageData["article"] = $result[0];
 	}
 
 }

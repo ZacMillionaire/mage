@@ -19,6 +19,7 @@ require_once "inc/MarkdownParser.php";
 class Main {
 
 	private static $dbConf, $siteConf, $pageTitle, $userSys;
+	public static $pageData;
 
 	function __construct() {
 

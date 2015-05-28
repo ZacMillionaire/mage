@@ -3,7 +3,7 @@
 class Research extends Main {
 
 	private static $basePath;
-	protected static $db, $pageData; 
+	protected static $db; 
 	
 	public function LoadView($sys) {
 
@@ -13,19 +13,19 @@ class Research extends Main {
 
 		self::$db = $sys->DatabaseSystem();
 
-		$actions = parent::ParseActions(2);
+		$actions = Main::ParseActions(2);
 
 		if(isset($actions[0]) && $actions[0] == "p") {
 
 			@$page = (isset($actions[1])) ? $actions[1] : 1;
-			self::$pageData["currentPage"] = $page;
+			Main::$pageData["currentPage"] = $page;
 			self::GetResearchEntryList($page);
 			include "research-page.php";
 
 		} elseif($actions == "default") {
 
 			@$page = (isset($actions[0]) && $actions[0] == "p") ? $actions[1] : 1;
-			self::$pageData["currentPage"] = $page;
+			Main::$pageData["currentPage"] = $page;
 			self::GetResearchEntryList($page);
 			include "research-page.php";
 
@@ -68,9 +68,9 @@ class Research extends Main {
 
 		}
 
-		self::$pageData["researchEntriesList"] = $result;
-		self::$pageData["entries"] = $result[0]['entries'];
-		self::$pageData["pages"] = ceil(self::$pageData["entries"]/$perPage);
+		Main::$pageData["researchEntriesList"] = $result;
+		Main::$pageData["entries"] = $result[0]['entries'];
+		Main::$pageData["pages"] = ceil(Main::$pageData["entries"]/$perPage);
 	}
 
 	private function GetNewsArticle($researchID) {
@@ -82,12 +82,12 @@ class Research extends Main {
 
 		$result = self::$db->Query($sql,$params);
 
-		self::$pageData["ToC"] = Main::GenerateToC($result[0]["full_body"]);
+		Main::$pageData["ToC"] = Main::GenerateToC($result[0]["full_body"]);
 
 		$Markdown = new Parsedown();
 		$result[0]["full_body"] = $Markdown->text($result[0]["full_body"]);
 
-		self::$pageData["researchEntry"] = $result[0];
+		Main::$pageData["researchEntry"] = $result[0];
 
 	}
 

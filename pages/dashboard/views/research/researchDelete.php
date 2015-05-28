@@ -2,15 +2,15 @@
 	include "researchMenu.php";
 ?>
 
-<?php if(!isset($_POST["action"]) && !isset(self::$pageData["deleted"])) { ?>
+<?php if(!isset($_POST["action"]) && !isset(Main::$pageData["deleted"])) { ?>
 <div class="header title">
 	<h1>Delete Research Entry</h1>
 </div>
 <div class="form-section">
-	<form action="/mage/dashboard/research/delete/<?php echo @self::$pageData["researchEntryData"]["researchID"]; ?>" method="POST">
+	<form action="/mage/dashboard/research/delete/<?php echo @Main::$pageData["researchEntryData"]["researchID"]; ?>" method="POST">
 
 		<?php
-			if(isset(self::$pageData["error"])){
+			if(isset(Main::$pageData["error"])){
 		?>
 		<div class="form-error">
 			<div class="form-error-header">
@@ -20,7 +20,7 @@
 				</h2>
 			</div>
 			<div class="form-error-body">
-				<?php echo self::$pageData["error"]; ?>
+				<?php echo Main::$pageData["error"]; ?>
 			</div>
 		</div>
 		<?php
@@ -35,10 +35,10 @@
 			</div>
 			<div class="form-error-body">
 				<div class="article-header">
-					<h1><?php echo self::$pageData["researchEntryData"]["title"]; ?></h1>
+					<h1><?php echo Main::$pageData["researchEntryData"]["title"]; ?></h1>
 				</div>
 				<div class="article-body">
-					<?php echo self::$pageData["researchEntryData"]["full_body"]; ?>
+					<?php echo Main::$pageData["researchEntryData"]["full_body"]; ?>
 				</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 		?>
 		<div class="form-button full-width">
 		<?php
-			if(!isset(self::$pageData["error"])){
+			if(!isset(Main::$pageData["error"])){
 		?>
 			<button class="blue" type="submit" name="action" value="cancel">Cancel</button>
 			<button class="red" type="submit" name="action" value="delete"><i class="fa fa-exclamation-circle"></i> Delete</button>
@@ -61,7 +61,7 @@
 		</div>
 	</form>
 </div>
-<?php } elseif(@self::$pageData["deleted"]===true){ ?>
+<?php } elseif(@Main::$pageData["deleted"]===true){ ?>
 <div class="dashboard-message">
 	<div class="header title">
 		<h1>Research Entry Deleted</h1>
@@ -77,7 +77,7 @@
 				</h2>
 			</div>
 			<div class="form-error-body">
-				<?php echo self::$pageData["error"]; ?>
+				<?php echo Main::$pageData["error"]; ?>
 			</div>
 			<a href="/mage/dashboard/research/">Go back</a>
 		</div>

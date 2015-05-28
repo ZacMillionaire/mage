@@ -1,16 +1,16 @@
 <div class="header title">
-	<h1><?php echo self::$pageData["article"]["title"]; ?></h1>
+	<h1><?php echo Main::$pageData["article"]["title"]; ?></h1>
 </div>
 <div class="news-container">
 	<div class="news-item">
 		<div class="news-meta">
 			<?php
-			echo parent::AdjustDate(self::$pageData["article"]["datePosted"]);
+			echo Main::AdjustDate(Main::$pageData["article"]["datePosted"]);
 			?>
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
-			&bull; <a href="/mage/dashboard/news/edit/<?php echo self::$pageData["article"]["newsID"]; ?>">Edit</a>
+			&bull; <a href="/mage/dashboard/news/edit/<?php echo Main::$pageData["article"]["newsID"]; ?>">Edit</a>
 			<?php
 			}
 			?>
@@ -19,7 +19,7 @@
 			Table of contents
 			<ol class="article-toc-container" id="top">
 			<?php 
-			foreach(self::$pageData["ToC"] as $key => $value) {
+			foreach(Main::$pageData["ToC"] as $key => $value) {
 			?>
 				<li class="toc-level-<?php echo $value["depth"] ?>"><a href="#<?php echo $value["title"]; ?>"><?php echo $value["title"]; ?></a></li>
 			<?php
@@ -28,7 +28,7 @@
 			</ol>
 		</div>
 		<div class="news-full">
-			<?php echo self::$pageData["article"]["full_body"]; ?>
+			<?php echo Main::$pageData["article"]["full_body"]; ?>
 		</div>
 	</div>
 </div>

@@ -3,7 +3,7 @@
 ?>
 
 <?php
-foreach(self::$pageData["researchList"] as $key => $value) {
+foreach(Main::$pageData["researchList"] as $key => $value) {
 ?>
 <div class="news-list-item">
 	<div class="news-list-title">

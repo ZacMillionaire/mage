@@ -5,16 +5,16 @@
 
 	<div class="news-pagination">
 		<?php
-			if(self::$pageData["pages"] > 1){
-				for($i = 1; $i <= self::$pageData["pages"]; $i++){
-					if(self::$pageData["currentPage"] == $i){
+			if(Main::$pageData["pages"] > 1){
+				for($i = 1; $i <= Main::$pageData["pages"]; $i++){
+					if(Main::$pageData["currentPage"] == $i){
 					?>
 					<div class="pagination-index current"><?php echo $i; ?></div>
 					<?php	
 					} else {
 					?>
 					<div class="pagination-index">
-						<a href="/mage/news/p/<?php echo $i; ?>">
+						<a href="/mage/research/p/<?php echo $i; ?>">
 							<?php echo $i; ?>
 						</a>
 					</div>
@@ -31,24 +31,24 @@
 
 	<?php
 		// coming from dashboard::pageData, set in researchPageModel.php
-		foreach(self::$pageData["researchEntriesList"] as $key => $value){
+		foreach(Main::$pageData["researchEntriesList"] as $key => $value){
 	?>
 	<div class="news-item">
 		<div class="news-title"><h1><?php echo $value["title"]; ?></h1></div>
 		<div class="news-meta">
 			<div class="news-date">Started: <?php
-				echo parent::AdjustDate($value["dateStarted"],false);
+				echo Main::AdjustDate($value["dateStarted"],false);
 				?>
 			</div>
 			<div class="news-date">Ended: <?php
 				if($value["dateEnded"] != null) {
-					echo parent::AdjustDate($value["dateEnded"],false);
+					echo Main::AdjustDate($value["dateEnded"],false);
 				} else {
 					echo "(On Going)";
 				}
 				?>
 			</div>
-			<a href="/mage/research/<?php echo parent::UrlifyArticleTitle($value["title"],$value["researchID"]); ?>">Read</a>
+			<a href="/mage/research/<?php echo Main::UrlifyArticleTitle($value["title"],$value["researchID"]); ?>">Read</a>
 			<?php
 			if($sys->UserStatus["loggedIn"]) {
 			?>
@@ -62,7 +62,7 @@
 			<?php echo $value["full_body"]; ?>
 			<?php if($value["overflow"] == "overflow"){ ?>
 			<div class="read-more">
-				<a href="/mage/research/<?php echo parent::UrlifyArticleTitle($value["title"],$value["researchID"]); ?>">Read Full Entry</a>
+				<a href="/mage/research/<?php echo Main::UrlifyArticleTitle($value["title"],$value["researchID"]); ?>">Read Full Entry</a>
 			</div>
 			<?php } ?>
 		</div>
@@ -73,9 +73,9 @@
 
 	<div class="news-pagination">
 		<?php
-			if(self::$pageData["pages"] > 1){
-				for($i = 1; $i <= self::$pageData["pages"]; $i++){
-					if(self::$pageData["currentPage"] == $i){
+			if(Main::$pageData["pages"] > 1){
+				for($i = 1; $i <= Main::$pageData["pages"]; $i++){
+					if(Main::$pageData["currentPage"] == $i){
 					?>
 					<div class="pagination-index current"><?php echo $i; ?></div>
 					<?php	

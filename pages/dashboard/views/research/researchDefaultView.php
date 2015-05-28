@@ -4,8 +4,8 @@
 <div id="dashboard-news-items-container">
 	<?php
 		// coming from dashboard::pageData, set in newsModel.php
-	if(!empty(self::$pageData["researchList"])) {
-		foreach(self::$pageData["researchList"] as $key => $value){
+	if(!empty(Main::$pageData["researchList"])) {
+		foreach(Main::$pageData["researchList"] as $key => $value){
 	?>
 	<div class="news-item">
 		<div class="news-title"><?php echo $value["title"]; ?></div>

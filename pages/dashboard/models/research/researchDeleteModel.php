@@ -8,18 +8,18 @@ class ResearchDeleteModel extends Dashboard {
 
 	public function __construct() {
 
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 		self::GetResearchEntryData($actions[1]);
 
 		if(isset($_POST["action"])){
 
 			if($_POST["action"] === "delete" && isset($actions[1])) {
 
-				if(isset(parent::$pageData["researchEntryData"])){
+				if(isset(Main::$pageData["researchEntryData"])){
 					self::DeleteResearchEntry($actions[1]);				
 				} else {
-					parent::$pageData["error"] = "Research Entry not found";
+					Main::$pageData["error"] = "Research Entry not found";
 				}
 
 			} elseif($_POST["action"] === "cancel") {
@@ -36,11 +36,11 @@ class ResearchDeleteModel extends Dashboard {
 
 		$result = self::$db->Query($sql,$params);
 		if(empty($result)) {
-			parent::$pageData["error"] = "Research Entry not found";
+			Main::$pageData["error"] = "Research Entry not found";
 		} else {
 			$Markdown = new Parsedown();
-			parent::$pageData["researchEntryData"] = $result[0];
-			parent::$pageData["researchEntryData"]["full_body"] = $Markdown->text(parent::$pageData["researchEntryData"]["full_body"]);
+			Main::$pageData["researchEntryData"] = $result[0];
+			Main::$pageData["researchEntryData"]["full_body"] = $Markdown->text(Main::$pageData["researchEntryData"]["full_body"]);
 		}
 	}
 
@@ -51,7 +51,7 @@ class ResearchDeleteModel extends Dashboard {
 
 		$result = self::$db->Delete($sql,$params);
 
-		parent::$pageData["deleted"] = true;
+		Main::$pageData["deleted"] = true;
 
 	}
 

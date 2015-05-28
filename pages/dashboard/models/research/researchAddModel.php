@@ -22,6 +22,8 @@ class ResearchAddModel extends Dashboard {
 
 	private function ParseInput($formData){
 
+
+
 		$dateStart = explode("/", $formData["dateStarted"]);
 		$dateStart = date("Y-m-d H:i:s T", strtotime($dateStart[1]."/".$dateStart[0]."/".$dateStart[2]));
 
@@ -43,7 +45,7 @@ class ResearchAddModel extends Dashboard {
 		$result = self::InsertIntoDatabase($newsItem);
 
 		if($result != false){
-			parent::$pageData["researchLink"] = self::UrlifyArticleTitle($formData["title"],$result[0]["newsID"]);	
+			Main::$pageData["researchLink"] = Main::UrlifyArticleTitle($formData["title"],$result[0]["researchID"]);
 		}
 	}
 
@@ -63,7 +65,7 @@ class ResearchAddModel extends Dashboard {
 
 	private function InsertIntoDatabase($data) {
 
-		$db = parent::$sys->DatabaseSystem();
+		$db = Dashboard::$sys->DatabaseSystem();
 
 		$sql = "INSERT INTO `research`(
 					`title`,
@@ -79,10 +81,9 @@ class ResearchAddModel extends Dashboard {
 					:full_body
 				)";
 		$params = $data;
-
 		if($db->Insert($sql,$params)){
 			return $db->Query(
-				"SELECT `researchID` FROM `research` WHERE `title` = :title AND `dateStarted` = :dateStart",
+				"SELECT `researchID` FROM `research` WHERE `title` = :title AND `dateStarted` = :dateStarted",
 				array(
 					"title"=>$data["title"],
 					"dateStarted" => $data["dateStarted"]
@@ -95,7 +96,7 @@ class ResearchAddModel extends Dashboard {
 
 	private function PreviewEntry($data) {
 		$Markdown = new Parsedown();
-		parent::$pageData["researchPreview"] = $Markdown->text($data["body"]);
+		Main::$pageData["researchPreview"] = $Markdown->text($data["body"]);
 
 		self::GenerateToC($data);
 	}
@@ -121,7 +122,7 @@ class ResearchAddModel extends Dashboard {
 
 		uasort($headers, array($this,"HeaderSort"));
 
-		parent::$pageData["ToC"] = $headers;
+		Main::$pageData["ToC"] = $headers;
 
 		//" <a href=\"#top\"><i class=\"fa fa-chevron-circle-up\"></i></a>"
 	}

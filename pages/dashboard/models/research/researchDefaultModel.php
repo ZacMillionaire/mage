@@ -5,7 +5,7 @@ class ResearchDefaultModel extends Dashboard {
 	protected static $db; 
 
 	public function __construct(){
-		self::$db = parent::$sys->DatabaseSystem();
+		self::$db = Dashboard::$sys->DatabaseSystem();
 		self::GetResearchList();
 	}
 
@@ -14,7 +14,7 @@ class ResearchDefaultModel extends Dashboard {
 		$sql = "SELECT * FROM `research` ORDER BY `researchID` DESC LIMIT 0, :limit;";
 		$params = array("limit" => $limit);
 
-		parent::$pageData["researchList"] = self::$db->Query($sql,$params);
+		Main::$pageData["researchList"] = self::$db->Query($sql,$params);
 	}
 
 }

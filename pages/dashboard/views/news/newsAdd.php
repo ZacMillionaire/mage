@@ -2,27 +2,27 @@
 	include "newsMenu.php";
 ?>
 
-<?php if(isset(self::$pageData["articleLink"])){ ?>
+<?php if(isset(Main::$pageData["articleLink"])){ ?>
 <div class="dashboard-message">
 	<div class="header title">
 		<h1>Article Posted</h1>
 	</div>
-	<a href="news/<?php echo self::$pageData["articleLink"]; ?>">View Article</a>
+	<a href="/mage/news/<?php echo Main::$pageData["articleLink"]; ?>">View Article</a>
 </div>
 <?php } ?>
 
-<?php if(@isset(self::$pageData["ArticlePreview"])){ ?>
+<?php if(@isset(Main::$pageData["ArticlePreview"])){ ?>
 <div class="article-preview">
 	<div class="header title">
 		<h1>Article Preview</h1>
 	</div>
 	<div class="article-container">
-		<?php echo self::$pageData["ArticlePreview"]; ?>
+		<?php echo Main::$pageData["ArticlePreview"]; ?>
 	</div>
 </div>
 <?php } ?>
 
-<?php if(!isset(self::$pageData["articleLink"])){ ?>
+<?php if(!isset(Main::$pageData["articleLink"])){ ?>
 <div class="header dashboard-title">
 	<h1>New Article</h1>
 </div>
