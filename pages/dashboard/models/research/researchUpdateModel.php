@@ -6,8 +6,8 @@ class ResearchUpdateModel extends Dashboard {
 
 	public function __construct(){
 
-		self::$db = parent::$sys->DatabaseSystem();
-		$actions = parent::ParseAction();
+		self::$db = Dashboard::$sys->DatabaseSystem();
+		$actions = Dashboard::ParseAction();
 		self::GetResearchEntryData($actions[1]);
 
 		if(isset($_POST["action"])){
@@ -33,31 +33,31 @@ class ResearchUpdateModel extends Dashboard {
 		$sql = "SELECT * FROM `research` WHERE `researchID` = :researchID;";
 		$params = array("researchID"=>$researchID);
 
-		parent::$pageData["researchEntryData"] = self::$db->Query($sql,$params)[0];
+		Main::$pageData["researchEntryData"] = self::$db->Query($sql,$params)[0];
 	}
 
 	public function PreviewEntry($data) {
 		$Markdown = new Parsedown();
-		parent::$pageData["updatePreview"] = $Markdown->text($data["updateBody"]);
+		Main::$pageData["updatePreview"] = $Markdown->text($data["updateBody"]);
 	}
 
 	public function ReParseInput($formData){
 
-		parent::$pageData["researchEntryData"]["full_body"] .= "\n"."#".$formData["updateTitle"]."\n".$formData["updateBody"];
+		Main::$pageData["researchEntryData"]["full_body"] .= "\n"."#".$formData["updateTitle"]."\n".$formData["updateBody"];
 
 		$researchItem = array(
-			"title" => parent::$pageData["researchEntryData"]["title"],
-			"dateStarted" => parent::$pageData["researchEntryData"]["dateStarted"],
-			"dateEnded" => parent::$pageData["researchEntryData"]["dateEnded"],
-			"short_body" => self::format_short(parent::$pageData["researchEntryData"]["full_body"]),
-			"full_body" => trim(parent::$pageData["researchEntryData"]["full_body"]),
-			"researchID" => parent::$pageData["researchEntryData"]["researchID"]
+			"title" => Main::$pageData["researchEntryData"]["title"],
+			"dateStarted" => Main::$pageData["researchEntryData"]["dateStarted"],
+			"dateEnded" => Main::$pageData["researchEntryData"]["dateEnded"],
+			"short_body" => self::format_short(Main::$pageData["researchEntryData"]["full_body"]),
+			"full_body" => trim(Main::$pageData["researchEntryData"]["full_body"]),
+			"researchID" => Main::$pageData["researchEntryData"]["researchID"]
 		);
 
 		$result = self::UpdateArticleInDatabase($researchItem);
 
 		if($result != false){
-			parent::$pageData["researchEntryLink"] = self::UrlifyArticleTitle(parent::$pageData["researchEntryData"]["title"],parent::$pageData["researchEntryData"]["researchID"]);	
+			Main::$pageData["researchEntryLink"] = Main::UrlifyArticleTitle(Main::$pageData["researchEntryData"]["title"],Main::$pageData["researchEntryData"]["researchID"]);	
 		} else {
 			print_r($result);
 		}
@@ -97,49 +97,6 @@ class ResearchUpdateModel extends Dashboard {
 		} else {
 			return false;
 		}
-	}
-
-	private function UrlifyArticleTitle($title,$databaseID) {
-		$titleArray = preg_replace('/[^A-Za-z0-9-\s]/', '', $title);
-		$titleArray = strtolower($title);
-		$titleArray = preg_replace("/\s/", '-', $titleArray);
-		return "$titleArray-$databaseID";
-	}
-
-	// gets all headers and generates a toc based on their location in the text
-	private function GenerateToC($data) {
-
-		$headers = array();
-
-		for($i = 1; $i <= 6; $i++) {
-			$re = "/^#{".$i."}([\w|\s].*?)$/m"; 
-			preg_match_all($re, $data["body"], $matches, PREG_OFFSET_CAPTURE);
-			
-			foreach ($matches[1] as $key => $value) {
-				$header = array(
-					"depth" => $i,
-					"title" => trim($value[0]),
-					"pos" => $value[1]
-				);
-				array_push($headers, $header);
-			}		
-		}
-
-		uasort($headers, array($this,"HeaderSort"));
-
-		parent::$pageData["ToC"] = $headers;
-
-		//" <a href=\"#top\"><i class=\"fa fa-chevron-circle-up\"></i></a>"
-	}
-
-	private function HeaderSort($a,$b) {
-
-		if($a["pos"] > $b["pos"]){
-			return 1;
-		} else  {
-			return -1;
-		}
-
 	}
 
 }

@@ -15,9 +15,10 @@
 			}
 			?>
 		</div>
-		<div class="article-toc">
-			Table of contents
-			<ol class="article-toc-container" id="top">
+
+		<div class="article-toc-container">
+			<h3>Table of contents</h3>
+			<ol class="article-toc">
 			<?php 
 			foreach(Main::$pageData["ToC"] as $key => $value) {
 			?>
@@ -27,8 +28,12 @@
 			?>
 			</ol>
 		</div>
+
 		<div class="news-full">
 			<?php echo Main::$pageData["article"]["full_body"]; ?>
 		</div>
 	</div>
+</div>
+<div id="back-to-top">
+	<a href="#top"><i class="fa fa-arrow-up fa-2x"></i></a>
 </div>
