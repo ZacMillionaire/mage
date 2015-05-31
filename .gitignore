@@ -55,3 +55,9 @@ mage.sublime-project
 *.exe
 *.sql
 *.zip
+
+styles/.sass-cache
+styles/_*.*
+styles/partials/*.*
+
+*.bat
